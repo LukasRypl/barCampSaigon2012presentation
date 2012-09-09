@@ -1,0 +1,146 @@
+% use pdflatex to create the output file
+\documentclass[14pt, t]{beamer}
+\usefonttheme{structurebold} % no serifs
+\usetheme{Boadilla}
+\setbeamersize{text margin left=10mm, text margin right=10mm} % 10 mm by default
+\setbeamertemplate{navigation symbols}{} % no navigation symbols
+
+% for \justifying
+\usepackage{ragged2e}
+
+% items enclosed in square brackets are optional
+\title{Test Driven Development}
+\subtitle{with JUnit and Fittness}
+\author{Lukas Rypl}
+\institute[BarCamp Saigon]{
+TTC MARCONI\\
+Czech Republic\\
+[1em]
+Twitter: @LukasRypl\\
+[2em]
+for BarCamp Saigon\\
+[1em]
+\includegraphics[height=4em]{images/BarcampLogo_transparent.png}
+
+}
+\logo{\includegraphics[height=6mm]{images/BarcampLogo_transparent.png}}
+\date{9/9/2012}
+
+\begin{document}
+%--- the titlepage frame -------------------------%
+\begin{frame}[plain]
+	\titlepage
+\end{frame}
+
+%--- the presentation begins here ----------------%
+
+
+\begin{frame}{Target Audience}
+	\begin{itemize}
+		\item Java developers
+		\item Programmers in any other language
+		\item Their team leaders
+		\item Testers
+	\end{itemize}
+
+	\pause
+	Profesionals who
+	\begin{itemize}
+		\item feel safer
+		\item sleep better
+		\item validate their work
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Agenda}
+	\begin{itemize}
+		\item Intro - what and why
+		\item Simple project with JUnit
+		\item Adding Fitness
+		\item Advanced topics
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Our simple project}
+	Everybody is talking about BarCamp.
+	\pause
+	\begin{itemize}
+		\item Bar Camp Saigon
+		\item barcamp
+		\item BarCamp Saigon 2012
+		\item \#barcampsaigon
+		\item \ldots
+	\end{itemize}
+
+	\pause
+Task: is it a valid name?	
+\end{frame}
+
+
+\begin{frame}[fragile]{Developers Work Algorithm}
+	Test Driven Development
+	\begin{verbatim}
+	while (task.requiresWork()) 
+	{
+	  1. Write a failing unit test
+	  2. Write implementation
+	}
+	\end{verbatim}
+\end{frame}
+
+
+\begin{frame}{Why Unit Testing}
+	\begin{itemize}
+		\item make sure that foundations are OK
+		\item create better (extensible) design
+		\item think about edge cases
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Tools}
+	\begin{itemize}
+		\item Eclipse (IDE) www.eclipse.org
+		\item JUnit (unit testing library) www.junit.org
+\pause
+		\item Fitness www.fitnesse.org
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Time to play}
+	\begin{itemize}
+		\item JUnit
+		\item Fitness
+	\end{itemize}
+\pause
+Why another tool?
+	\begin{itemize}
+		\item acessibe to non-programers
+		\item examples can be created during analysis
+		\item may overlap with junit / preventing duplication?
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Unit Testing Books}
+	\begin{itemize}
+		\item Kent Beck:\\ Test Driven Development by Example (2002)
+		\item Martin Fowler:\\ Refactoring: Improving the Design of Existing Code (1999)
+		\item Michael E. Faethers:\\ Working Effectively with Legacy Code (2004)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Advanced Topics}
+	\begin{itemize}
+		\item dealing with dependencies (mocks, stubs)
+			\pause
+		\item running tests automatically
+		\pause
+		\item acceptance tests driven development (ATDD), specification by example (cucumber)
+		\pause
+		\item when unit tests do not pay off?
+	\end{itemize}
+\end{frame}
+
+\end{document}
